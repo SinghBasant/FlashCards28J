@@ -327,7 +327,7 @@ if selected_cert and selected_domain:
         st.session_state.show_answer = False
 
     # Add a load button
-    if st.button("Load Flash Cards", type="primary"):
+    if st.button("Show Me Flash Cards", type="primary"):
         st.session_state.initialized = True
         # Reset states when explicitly loading new cards
         if (st.session_state.last_cert != selected_cert or 
@@ -336,7 +336,7 @@ if selected_cert and selected_domain:
             st.session_state.current_card_index = 0
             st.session_state.show_answer = False
         
-        with st.spinner(f"Generating flash cards for {selected_domain}..."):
+        with st.spinner(f"Whizlabs is Generating flash cards for {selected_domain}..."):
             st.session_state.cards = get_cached_certification_data(
                 selected_cert, selected_domain, num_cards
             )
@@ -374,7 +374,7 @@ if st.session_state.initialized and st.session_state.cards:
                 if card_id not in st.session_state.revealed_answers:
                     # Show clickable placeholder with tooltip
                     if st.button(
-                        "Click to reveal answer",
+                        "Click Me to reveal answer",
                         key=f"reveal_{i}",
                         help="Click here to reveal the answer",
                         type="secondary"
