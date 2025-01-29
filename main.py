@@ -488,7 +488,7 @@ if st.session_state.initialized and st.session_state.cards:
             st.error("An error occurred while displaying the card. Please try refreshing the page.")
 else:
     # Show instructions when cards haven't been loaded
-    st.info("👆 Select your preferences in the sidebar and click 'Load Flash Cards' to start studying!")
+    st.info("👆 Select your preferences in the sidebar and click 'Show Me Flash Cards' to start your preparation!")
 
 # Footer
 st.markdown("""
